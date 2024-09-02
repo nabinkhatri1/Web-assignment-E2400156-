@@ -1,0 +1,465 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 96, 3);
+    color: #333;
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+/* Prevent horizontal scrolling */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.container,
+.login-signup-container {
+    max-width: 100%;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: rgb(10, 116, 19);
+    color: white;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 3000; /* Ensures it stays above other content */
+    transition: all 0.3s ease; /* Smooth transition for resizing */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 15px;
+}
+
+.header-left h1 {
+    font-size: 28px;
+}
+
+.header-right img {
+    height: 27px;
+    margin-left: -5px;
+    transition: transform 0.3s;
+}
+
+.header-right img:hover {
+    transform: scale(1.1);
+}
+
+.tagline {
+    font-size: 18px;
+    margin-right: 15%;
+    font-weight: bold;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #094609; 
+    padding: -20px 0; /* Padding around navigation */
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 999; /* Ensures it stays below header */
+    transition: padding 0.3s ease; /* Smooth transition for resizing */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #430a12; 
+    color: #000000; /* Light green text on hover */
+}
+
+/* Search Bar */
+.search-bar {
+
+    text-align: right;
+    margin: -2px 0;
+    background-color: #92d286; /* Background color */
+    padding: 0px; /* Padding around search bar */
+    position: sticky; /* For Safari */
+    left: 82%;
+    top: 89px; 
+    z-index: 998; /* Ensures it stays below navigation */
+}
+
+.search-bar img {    
+    position: relative;
+    top: 10px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.search-bar input[type="text"] {
+    width: 20%;
+    padding: 10px;
+    border: 2px solid #83d983; /* Dark green border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #000000;
+}
+
+
+
+/* Slideshow Section */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+}
+
+.slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+}
+
+.slogan {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+}
+
+
+/* ........................................................................ */
+
+/* Product Display Section */
+.product-section {
+    padding: 20px 10px;
+    background-color: rgb(203, 219, 177);
+}
+
+.product-section h2 {
+    text-align: auto;
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.product-catogory h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    width: 150%;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 50px;
+    margin-left: 10%;
+}
+
+.product-item {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.product-item img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.product-item h3 {
+    font-size: 24px;
+    color: #006600;
+    margin: 15px 0 10px;
+}
+
+.product-item .price {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.product-item .price:hover {
+    color: #009900;
+    font-size: 22px;
+}
+
+.product-item .buy-now {
+    background-color: #006600;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.product-item .buy-now:hover {
+    background-color: #0c9e0c;
+    transform: scale(1.1);
+}
+/* ........................................................................ */
+
+
+
+
+/* Footer Section */
+footer {
+    background-color: #004d00;
+    color: white;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* General Footer Section Styles */
+.footer-section {
+    margin-bottom: -10px;
+}
+
+.footer-section h3, .footer-section p {
+    margin: 0;
+}
+
+/* First Section: Team Members */
+.team-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-photo {
+    border-radius: 40%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-photo:hover {
+    transform: scale(1.1); /* Slightly enlarge the photo on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+.team-info h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.team-info p {
+    font-size: 14px;
+}
+
+/* Second Section: Contact Info and Social Media */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info img {
+    width: 120px;
+    /* height: 40px; */
+    margin-right: 10px;
+}
+
+.location-details p {
+    margin: 0;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.social-media a {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a img {
+    height: 30px;
+    margin: -11px;
+}
+
+.social-media a:hover img {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.phone-details {
+    margin-top: 10px;
+}
+
+
+/* Third Section: Company Name */
+.company-name {
+    text-align: center;
+    font-size: 14px;
+}
+
+/* new arrivals section started */
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf4ea;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* New Arrivals Section */
+.new-arrivals {
+    padding: 20px;
+    text-align: center;
+}
+
+.new-arrivals h2 {
+    color: #004d00; /* Dark green */
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.3s;
+}
+
+.product-item img:hover {
+    opacity: 0.8;
+}
+
+.product-name {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #004d00; /* Dark green */
+}
+
+.product-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price span {
+    font-size: 16px;
+    color: #006600; /* Green */
+}
+
+.buy-btn {
+    background-color: #004d00; /* Dark green */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #009900; /* Lighter green on hover */
+    transform: scale(1.1);
+}
+
+
+
