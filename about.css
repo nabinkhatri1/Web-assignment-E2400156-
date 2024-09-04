@@ -1,0 +1,140 @@
+/* about section//////////////////////////////////////////////// */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(185, 213, 138);
+    color: #333;
+}
+
+/* Company Details Section */
+.company-details {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.company-photo img {
+    width: 62%;
+    border-radius: 10px;
+    margin-left: auto;
+}
+
+.company-info {
+    margin-left: 20px;
+    width: 60%;
+}
+
+/* Feedback Section */
+.feedback-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #d9e7d9;
+}
+
+.old-feedback, .new-feedback {
+    width: 48%;
+}
+
+.feedback-item img {
+    width: 264px;
+    /* height: 50px; */
+    border-radius: 11%;
+    margin-right: 10px;
+}
+
+.new-feedback textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #004d00;
+    border-radius: 5px;
+}
+
+.new-feedback .submit-btn {
+    background-color: #004d00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-feedback .submit-btn:hover {
+    background-color: #006600;
+}
+
+/* Meet Our Team Section */
+.meet-our-team {
+    padding: 6px;
+    background-color: #f1f7f1;
+    text-align: center;
+}
+
+.meet-our-team h2 {
+    margin-bottom: 20px;
+}
+
+.team-member {
+    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 190px;
+    height: 158px;
+    border-radius: 24%;
+    transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+    transform: scale(1.1);
+}
+
+.team-member .name, .team-member .position {
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 20%;
+    height: auto;
+    margin:-1Spx;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    background-color: #004d00; /* Dark green background */
+    color: white;
+    text-align: center;
+    border-top-left-radius: 50px; /* Curved line effect */
+    border-top-right-radius: 50px;
+}
+
+.company-name h3 {
+    font-family: 'Cursive', sans-serif;
+    font-size: 24px;
+}
+
+.company-contact {
+    margin-top: 10px;
+}
+
+.company-contact img {
+    width: 34px;
+    margin: -5 -2px;
+    transition: transform 0.3s ease;
+    border-radius: 40%;
+}
